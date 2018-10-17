@@ -1,0 +1,9 @@
+language: generic
+dist: xenial
+sudo: required
+
+install:
+  - bash ./install_powershell.sh
+
+script:
+  - bash ./test.sh
