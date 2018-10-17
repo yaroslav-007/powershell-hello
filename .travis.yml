@@ -1,11 +1,12 @@
 language: generic
-dist: trusty
+dist: xenial
 sudo: required
 
 install:
-  - curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
-  - curl https://packages.microsoft.com/config/ubuntu/14.04/prod.list | sudo tee /etc/apt/sources.list.d/microsoft.list
+  - wget https://packages.microsoft.com/config/ubuntu/16.04/packages-microsoft-prod.deb
+  - dpkg -i packages-microsoft-prod.deb
   - sudo apt-get update
-- sudo apt-get install -y powershell=6.0.2-1.ubuntu.14.04
+  - sudo apt-get install -y powershell
+
 script:
-- bash ./test.sh
+  - bash ./test.sh
