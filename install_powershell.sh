@@ -8,5 +8,5 @@ sudo dpkg -i packages-microsoft-prod.deb
 
 sudo apt-get update
 sudo apt-get install -y powershell
-sudp apt-get clean
+sudo apt-get clean
 rm packages-microsoft-prod.deb
